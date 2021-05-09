@@ -33,6 +33,18 @@ The server is now running. Access it at http://localhost:3000/
 
 Distributed under the MIT License.
 
+## How It Works
+
+There are two scripts located at /scripts, ```runlatex.js``` and ```update.js```. 
+
+1. ```runlatex.js```
+
+This script uses TeXLive.net server, which accepts a HTTP Post request specifying a LaTeX document and returns a PDF document or error log. This LaTeX document is generated on ```update.js```.
+
+2. ```update.js```
+
+This script fills the blanks on the résumé form according to the user input and fills the text area that shall be sent as a HTTP Post request to the TeXLive.net server through ```runlatex.js```. 
+
 ## Acknowledgements
 
 * [runlatex.js](https://github.com/learnlatex/learnlatex.github.io)
