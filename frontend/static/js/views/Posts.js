@@ -12,13 +12,36 @@ export default class extends AbstractView {
             <p>
                 1. Escolha o template
             <p>
+
             <form>
-                <input type="radio" id="firstTemplate" name="template" value="firstTemplate" onclick="whichTemplate()">
-                <label for="firstTemplate">Template PT-BR</label><br>
-                <input type="radio" id="secondTemplate" name="template" value="secondTemplate" onclick="whichTemplate()"    >  
-                <label for="secondTemplate">Template EN</label>                 
-            </form>                       
-            <input type="text" id="field2" style="display:none">
+            <table style="width:100%">
+            <tr>            
+                <td><figure>
+                <img src="images/firstTemplate.png"
+                    width="300" height="400">
+                </figure>  
+                <input type="radio" id="firstTemplate" name="template" value="firstTemplate" onclick="whichTemplate()">               
+                <label for="firstTemplate">Template no. 1</label><br></td>
+            
+                <td><figure>
+                <img src="images/secondTemplate.png"
+                    width="300" height="400">
+                </figure>  
+                <input type="radio" id="secondTemplate" name="template" value="secondTemplate" onclick="whichTemplate()">  
+                <label for="secondTemplate">Template no. 2</label></td>
+           
+                <td><figure>
+                <img src="images/thirdTemplate.png"
+                    width="300" height="400">
+                </figure>  
+                <input type="radio" id="thirdTemplate" name="template" value="thirdTemplate" onclick="whichTemplate()">  
+                <label for="thirdTemplate">Template no. 3</label>   </td>
+            </tr>
+          </table>  
+
+          </form>                       
+          <input type="text" id="field2" style="display:none">
+
             <p>
                 2. Preencha com seus dados:
             </p>

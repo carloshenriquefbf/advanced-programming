@@ -4,7 +4,7 @@ function whichTemplate() {
 
     for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
-            document.getElementById("field2").value = radios[i].value;         
+            document.getElementById("templateField").value = radios[i].value;         
             break;
         }
       }
