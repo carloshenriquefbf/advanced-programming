@@ -8,9 +8,13 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-            <h1>Settings</h1>
-            <p>This is where you manage and change your configuration.</p>
-				<p>Please consider donating to this project.</p>
+            <h1>Obrigado por usar o Curriculum Generator Project!</h1>
+            <p>Todos os currículos aqui apresentados foram devidamente creditados e utilizados sob a licença Creative Commons — Atribuição 4.0 Internacional — CC BY 4.0 .</p>
+
+            <footer>
+                <p>Desenvolvedores: Alexandre Leite, Carlos Henrique Ferreira, Christopher Brandão, Giovanni Paes, Lucas Chagas, Paulo Victor</p>
+                <p>Disciplina: EEL418-Programação Avançada</p>
+            </footer> 
         `;
     }
 }

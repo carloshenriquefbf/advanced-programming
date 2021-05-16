@@ -35,3 +35,13 @@ body {
 a {
     color: #009579;
 }
+
+td {
+    text-align: center;
+  }
+
+footer { 
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
