@@ -8,13 +8,14 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-            <h1>Welcome to Curriculum Generator Project</h1>
+            <h1>Seja bem vindo, meu caro desempregado!</h1>
             <p>
-                This is a place where you can automatically generate a curriculum by only inserting your data.
+                Versão atual sujeita a futuras alterações
             </p>
-            <p>
-                <a href="/posts" data-link>View recent posts</a>.
-            </p>
+            <form action="/posts">
+                <input type="submit" value="Começar" />
+            </form>
+
         `;
     }
 }
