@@ -12,7 +12,7 @@ export default class extends AbstractView {
         <h1 id="titulo">Modelador Auxiliar de Currículos</h1>     
         </div>
 
-        <form>
+        <form onload="update()">
         <table style="width:100%">
         <tr>            
             <td><figure>
@@ -167,15 +167,13 @@ export default class extends AbstractView {
     </form> 
 
     <form style="display" id="form2-pre0" name="form2-pre0" enctype="multipart/form-data" action="https://texlive.net/cgi-bin/latexcgi" method="post" target="pre0ifr">
-    <textarea style="display:none" type="text" name="filecontents[]" vairable="yname"></textarea>
+    <textarea type="text" style="display:none" name="filecontents[]" vairable="yname"></textarea>
         <input type="text" name="filename[]" value="document.tex" style="display:none">
         <input type="text" name="engine" value="pdflatex" style="display:none">
         <input type="text" name="return" value="pdfjs" style="display:none">
         <br>            
     <button class="llbutton" onclick="redirect();" id="lo-pre0">Gerar currículo</button>
     </form>  
-
-</body> 
                 `;
     }
 }

@@ -137,8 +137,7 @@ function update() {
         % --- Name and contact information ---
         
         \\begin{SectionTable}{\\Huge ${nomePessoa.value}} & 
-        ${email.value}   $\\;\\boldsymbol{\\cdot}\\;$ \\newline
-        ${phone.value}
+        ${email.value}   $\\;\\boldsymbol{\\cdot}\\;$ ${phone.value}
         \\end{SectionTable}
         
         % --- Section: Education ---
