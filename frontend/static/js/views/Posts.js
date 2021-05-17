@@ -80,8 +80,8 @@ export default class extends AbstractView {
                 </div>
             
                 <div class="campo">
-                    <label for="data"><strong>Previsão de Formatura</strong></label>
-                    <input id="data" type="date">
+                    <label for="dataformatura"><strong>Previsão de Formatura</strong></label>
+                    <input id="dataformatura" type="date" onkeyup="update()" onchange="update()">
                 </div>            
             </fieldset>
 
@@ -154,25 +154,25 @@ export default class extends AbstractView {
             
             <fieldset class="grupo"> 
                 <div class="campo">
-                    <label for="data"><strong>Data de Entrada</strong></label>
-                    <input id="data" type="date">
+                    <label for="dataentrada"><strong>Data de Entrada</strong></label>
+                    <input id="dataentrada" type="date" onkeyup="update()" onchange="update()">
                 </div>
                 
                 <div class="campo">
-                    <label for="data"><strong>Data de Saída</strong></label>
-                    <input id="data" type="date">
+                    <label for="datasaida"><strong>Data de Saída</strong></label>
+                    <input id="datasaida" type="date" onkeyup="update()" onchange="update()">
                 </div>
             </fieldset>
             <br>            
     </form> 
 
     <form style="display" id="form2-pre0" name="form2-pre0" enctype="multipart/form-data" action="https://texlive.net/cgi-bin/latexcgi" method="post" target="pre0ifr">
-    <textarea style="width: 26em" type="text" name="filecontents[]" vairable="yname"></textarea>
+    <textarea style="display:none" type="text" name="filecontents[]" vairable="yname"></textarea>
         <input type="text" name="filename[]" value="document.tex" style="display:none">
         <input type="text" name="engine" value="pdflatex" style="display:none">
         <input type="text" name="return" value="pdfjs" style="display:none">
         <br>            
-    <button class="llbutton" onclick="redirect(); latexcgi();" id="lo-pre0">Gerar currículo</button>
+    <button class="llbutton" onclick="redirect();" id="lo-pre0">Gerar currículo</button>
     </form>  
 
 </body> 
