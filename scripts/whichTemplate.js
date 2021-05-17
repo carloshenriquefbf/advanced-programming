@@ -9,5 +9,5 @@ function whichTemplate() {
         }
       }
 
-    
+    update();
   }
