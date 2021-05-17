@@ -33,7 +33,7 @@ function update() {
         \\vspace{8pt} % Gap between title and text
         
         \\noindent
-        {\\sl \\bfseries ${curso.value}} \\hfill [PREVISÃO DE FORMATURA] \\\\ 
+        {\\sl \\bfseries ${curso.value}} \\hfill ${dataformatura.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')} \\\\ 
         \\noindent ${universidade.value} \\\\
 
         \\vspace{0.2in} % Some whitespace between sections
@@ -62,7 +62,7 @@ function update() {
         \\vspace{8pt} % Gap between title and text
         
         \\noindent
-        {\\bfseries ${cargo.value}} \\hfill [MÊS - ANO] \\\\ 
+        {\\bfseries ${cargo.value}} \\hfill ${"de ".concat(dataentrada.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')," a ",datasaida.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/'))} \\\\ 
         \\noindent ${empresa.value} \\hfill ${localEmprego.value} \\\\ 
         
         \\vspace{6pt}
@@ -145,7 +145,7 @@ function update() {
         
         \\begin{SectionTable}{\\headingfont Educação}
         
-        [PREVISÃO DE FORMATURA] & 
+        ${dataformatura.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')} & 
         \\textbf{ ${universidade.value}}\\newline
         ${curso.value} \\\\
         \\end{SectionTable}
@@ -168,7 +168,7 @@ function update() {
         
         \\begin{SectionTable}{\\headingfont Experiência}
         
-        [DATA DE ENTRADA] &
+        ${"de ".concat(dataentrada.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')," a ",datasaida.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/'))} &
         \\textbf{${empresa.value} (${cargo.value})} -- ${localEmprego.value} \\newline
         ${descricaoAtividade1.value} \\\\
                         
@@ -204,7 +204,7 @@ function update() {
                 
                 \\textbf{${universidade.value}} 
                 
-                \\textit{${curso.value}} \\hfill PREVISÃO DE FORMATURA \\\\
+                \\textit{${curso.value}} \\hfill ${dataformatura.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')} \\\\
                 
                 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 % SKILLS
@@ -226,7 +226,7 @@ function update() {
                 
                 \\noindent \\textbf{${empresa.value}} \\hfill ${localEmprego.value} \\\\
                 
-                \\textit{${cargo.value}} \\hfill DATA \\\\
+                \\textit{${cargo.value}} \\hfill ${"de ".concat(dataentrada.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')," a ",datasaida.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/'))} \\\\
                 
                 \\begin{itemize}[noitemsep,nolistsep,leftmargin=*]
                 
