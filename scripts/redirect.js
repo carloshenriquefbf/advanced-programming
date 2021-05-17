@@ -1,3 +1,3 @@
 function redirect(){
-    window.location.href='/settings';
+    setTimeout(function () { document.location.href = '/settings' }, 1000); 
 }
