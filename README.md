@@ -18,8 +18,8 @@ To get a local copy up and running follow these simple example steps:
 
 3. Execute the comands in the terminal 
    ```sh
-   (sudo) docker build -f Dockerfile -t spa-curriculos . 
-   (sudo) docker run -p 3000:3000 -d spa-curriculos
+   sudo docker build -f Dockerfile -t spa-curriculos . 
+   sudo docker run -p 3000:3000 -d spa-curriculos
    ```
 The server is now running. Access it at http://localhost:3000/
 
