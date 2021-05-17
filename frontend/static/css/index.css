@@ -116,7 +116,7 @@ body {
     color: #59429d;
 }
 
-td {
+td, h1, h3, p {
     text-align: center;
   }
 

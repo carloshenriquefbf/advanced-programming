@@ -3,13 +3,13 @@ import AbstractView from "./AbstractView.js";
 export default class extends AbstractView {
     constructor(params) {
         super(params);
-        this.setTitle("Posts");
+        this.setTitle("Cadastro");
     }
 
     async getHtml() {
         return `
         <div class="campo">
-        <h1 id="titulo">Modelador Auxiliar de Currículos</h1>     
+            <h1 id="titulo">Modelador Auxiliar de Currículos</h1>     
         </div>
 
         <form onload="update()">
