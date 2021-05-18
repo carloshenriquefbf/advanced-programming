@@ -37,45 +37,15 @@ function update() {
         \\noindent ${universidade.value} \\\\
 
         \\vspace{0.2in} % Some whitespace between sections
-        
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%% HABILIDADES TÉCNICAS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        
-        \\begin{center}
-            {\\noindent \\bfseries Habilidades Técnicas}
-        \\end{center} 
-        
-        \\vspace{8pt} % Gap between title and text      
-
-        \\vspace{6pt}
-        \\begin{itemize} \\itemsep -2pt % Reduce space between items
-            \\item ${nomeHabilidade1.value} : ${descricaoHabilidade1.value}
-            \\item ${nomeHabilidade2.value} : ${descricaoHabilidade2.value}
-            \\item ${nomeHabilidade3.value} : ${descricaoHabilidade3.value}
-        \\end{itemize}
-        \\vspace{0.2in} % Some whitespace between sections
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%% EXPERIÊNCIA  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        
-        \\begin{center}
-            {\\noindent \\bfseries EXPERIÊNCIA}
-        \\end{center} 
-        
-        \\vspace{8pt} % Gap between title and text
-        
-        \\noindent
-        {\\bfseries ${cargo.value}} \\hfill ${"de ".concat(dataentrada.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')," a ",datasaida.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/'))} \\\\ 
-        \\noindent ${empresa.value} \\hfill ${localEmprego.value} \\\\ 
-        
-        \\vspace{6pt}
-        \\begin{itemize} \\itemsep -2pt % Reduce space between items
-            \\item ${descricaoAtividade1.value}
-        \\end{itemize}
-        
-        \\vspace{0.2in} % Some whitespace between sections
-        
+        `
+	+ add_skill() +
+	`
+	\\vspace{0.2in} % Some whitespace between sections
+	`
+	+ add_experience() +
+	`
         \\end{document}
-
-
-            `
+	`
     }
     else if (whichTemplate=='secondTemplate'){
         document.querySelector("textarea").value = `
@@ -148,31 +118,11 @@ function update() {
         \\textbf{ ${universidade.value}}\\newline
         ${curso.value} \\\\
         \\end{SectionTable}
-
-        % --- Section: Technical skills ---
-        
-        \\begin{SectionTable}{\\headingfont HABILIDADES TÉCNICAS}
-        & \\textbf{${nomeHabilidade1.value}} \\newline
-        ${descricaoHabilidade1.value} \\\\
-        
-        & \\textbf{${nomeHabilidade2.value}} \\newline
-        ${descricaoHabilidade2.value}\\\\
-
-        & \\textbf{${nomeHabilidade3.value}} \\newline
-        ${descricaoHabilidade3.value}\\\\
-        
-        \\end{SectionTable}
-        
-        % --- Section: Industry experience ---
-        
-        \\begin{SectionTable}{\\headingfont Experiência}
-        
-        ${"de ".concat(dataentrada.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')," a ",datasaida.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/'))} &
-        \\textbf{${empresa.value} (${cargo.value})} -- ${localEmprego.value} \\newline
-        ${descricaoAtividade1.value} \\\\
-                        
-        \\end{SectionTable}                  
-        
+	    `
+	    + add_skill() +
+	    ``
+	    + add_experience() +
+	    ` 
         % --- End of CV! ---
         
         \\end{document}     
@@ -204,36 +154,12 @@ function update() {
                 \\textbf{${universidade.value}} 
                 
                 \\textit{${curso.value}} \\hfill ${dataformatura.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')} \\\\
-                
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                % SKILLS
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                
-                \\noindent \\textbf{\\underline{HABILIDADES TÉCNICAS}} \\\\
-                
-                \\textbf{${nomeHabilidade1.value}}: ${descricaoHabilidade1.value} \\\\
-                
-                \\textbf{${nomeHabilidade2.value}}: ${descricaoHabilidade2.value} \\\\
-
-                 \\textbf{${nomeHabilidade3.value}}: ${descricaoHabilidade3.value} \\\\
-                % Skill 1 (level of expertise), Skill 2 (level of expertise), Skill 3 (level of expertise) \\\\
-                                
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                % WORK EXPERIENCE
-                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                \\noindent \\textbf{\\underline{EXPERIÊNCIA}} \\\\
-                
-                \\noindent \\textbf{${empresa.value}} \\hfill ${localEmprego.value} \\\\
-                
-                \\textit{${cargo.value}} \\hfill ${"de ".concat(dataentrada.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/')," a ",datasaida.value.replace(/(\d{4})\-(\d{2})\-(\d{2}).*/, '$3-$2-$1').replace(/-/g, '/'))} \\\\
-                
-                \\begin{itemize}[noitemsep,nolistsep,leftmargin=*]
-                
-                \\item {${descricaoAtividade1.value}} \\\\         
-                
-                \\end{itemize}                   
-                \\end{document}       
-
-        `   
+                `
+                + add_skill() +
+                ` `
+                + add_experience() +
+                `
+                        \\end{document}
+                `   
     }     
 }
