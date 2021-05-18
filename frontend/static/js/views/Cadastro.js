@@ -85,95 +85,31 @@ export default class extends AbstractView {
                 </div>            
             </fieldset>
 
-            <div class="campo">
-                <u><h2 id="titulo">Habilidades Técnicas</h2></u>
-            </div>
-
-            <fieldset class="grupo">
-                <div class="campo">
-                    <label for= "nomeHabilidade1"><strong>Habilidade no. 1</strong></label>
-                    <input type="text" name="nomeHabilidade1" id="nomeHabilidade1" onkeyup="update()">
+            <form>
+	            <div class="campo" id="Skill">
+                    <u><h2>Habilidades Técnicas</h2></u>
                 </div>
 
-                <div class="campo">
-                    <label for="descricaoHabilidade1"><strong>Descrição da Habilidade</strong></label>
-                    <input type="text" name="descricaoHabilidade1" id="descricaoHabilidade1" onkeyup="update()">
-                </div>
-            </fieldset>
+		        <button class="llbutton" onclick="addChild('Skill');" id="lo-pre2">Adicionar habilidade</button>
 
-            <fieldset class="grupo">
-                <div class="campo">
-                    <label for= "nomeHabilidade2"><strong>Habilidade no.2 </strong></label>
-                    <input type="text" name="nomeHabilidade2" id="nomeHabilidade2" onkeyup="update()">
-                </div>
+		        <div class="campo" id="Experience">
+		            <br>
+		            <u><h2>Experiências Anteriores</h2></u>
+		        </div>
 
-                <div class="campo">
-                    <label for="descricaoHabilidade2"><strong>Descrição da Habilidade</strong></label>
-                    <input type="text" name="descricaoHabilidade2" id="descricaoHabilidade2" onkeyup="update()">
-                </div>
-            </fieldset>
-
-            <fieldset class="grupo">
-                <div class="campo">
-                    <label for= "nomeHabilidade3"><strong>Habilidade no. 3</strong></label>
-                    <input type="text" name="nomeHabilidade3" id="nomeHabilidade3" onkeyup="update()">
-                </div>
-
-                <div class="campo">
-                    <label for="descricaoHabilidade3"><strong>Descrição da Habilidade</strong></label>
-                    <input type="text" name="descricaoHabilidade3" id="descricaoHabilidade3" onkeyup="update()">
-                </div>
-            </fieldset>
-
-            <div class="campo">
-                <u><h2 id="titulo">Experiências Anteriores</h2></u>
-            </div>
-
-            <fieldset class="grupo">
-                <div class="campo">
-                    <label for= "empresa"><strong>Empresa</strong></label>
-                    <input type="text" name="empresa" id="empresa" onkeyup="update()">
-                </div>
-
-                <div class="campo">
-                    <label for="localEmprego"><strong>Local</strong></label>
-                    <input type="text" name="localEmprego" id="localEmprego" onkeyup="update()">
-                </div>
-            </fieldset>
-
-            <fieldset class="grupo">
-            <div class="campo">
-                <label for="cargo"><strong>Cargo</strong></label>
-                <input type="text" name="cargo" id="cargo" onkeyup="update()">
-            </div>
-            <div class="campo">
-                <label for= "descricaoAtividade1"><strong>Descrição do Cargo</strong></label>
-                <input type="text" name="descricaoAtividade1" id="descricaoAtividade1" onkeyup="update()">
-            </div>
-            </fieldset>
-            
-            <fieldset class="grupo"> 
-                <div class="campo">
-                    <label for="dataentrada"><strong>Data de Entrada</strong></label>
-                    <input id="dataentrada" type="date" onkeyup="update()" onchange="update()">
-                </div>
-                
-                <div class="campo">
-                    <label for="datasaida"><strong>Data de Saída</strong></label>
-                    <input id="datasaida" type="date" onkeyup="update()" onchange="update()">
-                </div>
-            </fieldset>
+		        <button class="llbutton" onclick="addChild('Experience');" id="lo-pre1">Adicionar experiência</button>
+	        </form>
             <br>            
-    </form> 
+        </form> 
 
-    <form style="display" id="form2-pre0" name="form2-pre0" enctype="multipart/form-data" action="https://texlive.net/cgi-bin/latexcgi" method="post" target="pre0ifr">
-    <textarea type="text" style="display:none" name="filecontents[]" vairable="yname"></textarea>
-        <input type="text" name="filename[]" value="document.tex" style="display:none">
-        <input type="text" name="engine" value="pdflatex" style="display:none">
-        <input type="text" name="return" value="pdfjs" style="display:none">
-        <br>            
-    <button class="llbutton" onclick="redirect();" id="lo-pre0">Gerar currículo</button>
-    </form>  
+        <form style="display" id="form2-pre0" name="form2-pre0" enctype="multipart/form-data" action="https://texlive.net/cgi-bin/latexcgi" method="post" target="pre0ifr">
+        <textarea type="text" style="display:none" name="filecontents[]" vairable="yname"></textarea>
+            <input type="text" name="filename[]" value="document.tex" style="display:none">
+            <input type="text" name="engine" value="pdflatex" style="display:none">
+            <input type="text" name="return" value="pdfjs" style="display:none">
+            <br>            
+        <button class="llbutton" onclick="redirect();" id="lo-pre0">Gerar currículo</button>
+        </form>  
                 `;
     }
 }
