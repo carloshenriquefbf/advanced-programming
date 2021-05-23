@@ -10,7 +10,7 @@ function add_skill() {
                     %%%%%%%%%%%%%%%%%%%%%%%%%%%% HABILIDADES TÉCNICAS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
                     \\begin{center}
-                        {\\noindent \\bfseries Habilidades Técnicas}
+                        {\\noindent \\bfseries HABILIDADES TÉCNICAS}
                     \\end{center}
 
                     \\vspace{8pt} % Gap between title and text
