@@ -113,7 +113,7 @@ export default class extends AbstractView {
 				            <input type="text" name="engine" value="pdflatex" style="display:none">
 				            <input type="text" name="return" value="pdfjs" style="display:none">
 				            <br>
-				        <button class="llbutton" onclick="redirect();" id="lo-pre0">Gerar currículo</button>
+				        <button class="llbuttonend" onclick="redirect();" id="lo-pre0">Gerar currículo</button>
 				        </form>
 					</div>
 				</div>

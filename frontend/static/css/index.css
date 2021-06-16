@@ -81,12 +81,42 @@ fieldset.grupo .campo{
 
 }
 
-.campo input[type="text"], .campo input[type="email"], .campo input[type="phone"], .campo input[type="submit"], .campo input[type="password"], .campo select, .campo textarea {
+.campo input[type="text"], input[type="email"], input[type="phone"], input[type="password"], input[type='date'], select, textarea {
 	font-size-adjust: 15px;
 	padding: 0.75em;
 	border: 5px solid #FF7F50;
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 	display: block;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+	background-color: #FF7F50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+button[class="llbutton"], button[class="registerbtn"] {
+	background-color: #FF7F50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+button[class="llbuttonend"] {
+	background-color: #FF7F50;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 100%;
 }
 
 .campo select option{
@@ -102,10 +132,7 @@ fieldset.grupo .campo{
 }
 
 #principal{
-	background-image: url("cidade.jpg");
-	background-size: 100%;
-	min-height: 700px;
-	padding: 50px;
+    background-color: rgba(0, 0, 151, 0.2);
 }
 
 .efeito{
@@ -118,7 +145,6 @@ body{
    	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     background-color: rgb(0, 0, 151);
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
@@ -157,6 +183,10 @@ footer {
     bottom: 0;
     position: fixed;
 }
+
+Footer p {
+	font-size: 20px;
+   }
 
 form {
 	padding: 30px;
