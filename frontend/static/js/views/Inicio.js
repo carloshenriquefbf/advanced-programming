@@ -41,9 +41,12 @@ export default class extends AbstractView {
 			            <tr>
 			            <td>
 
-		            <form action="/cadastro">
-		                <input type="submit" value="Crie já seu currículo!" />
+		            <form action="/register">
+		                <input type="submit" value="Registrar" />
 		            </form>
+					<form action="/cadastro">
+					<input type="submit" value="Criar curríuclo" />
+					</form>
 		            </tr></td></table>
 
 					</div>
