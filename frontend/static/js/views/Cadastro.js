@@ -94,6 +94,7 @@ export default class extends AbstractView {
 				                </div>
 
 						        <button class="llbutton" onclick="addChild('Skill');" id="lo-pre2">Adicionar habilidade</button>
+								<button class="llbutton" onclick="rmChild('Skill');" id="lo-pre4">Remover habilidade</button>
 
 						        <div class="campo" id="Experience">
 						            <br>
@@ -101,6 +102,7 @@ export default class extends AbstractView {
 						        </div>
 
 						        <button class="llbutton" onclick="addChild('Experience');" id="lo-pre1">Adicionar experiência</button>
+								<button class="llbutton" onclick="rmChild('Experience');" id="lo-pre3">Remover experiência</button>
 					        </form>
 				            <br>
 				        </form>
