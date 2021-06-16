@@ -16,20 +16,20 @@ export default class extends AbstractView {
 			            <p>Todos os currículos aqui apresentados foram devidamente creditados e utilizados sob a licença Creative Commons — Atribuição 4.0 Internacional — CC BY 4.0.</p>
 			            <table style="width:100%">
 			            <br><br>
-			            <tr>            
-			            <td> 
-			            
+			            <tr>
+			            <td>
+
 			            <form action="/inicio">
 			                <input type="submit" value="Voltar para o início" />
 			            </form><br>
 			            <form action="/cadastro">
-			            <input type="submit" value="Voltar para o cadastro" />
+			            <input type="submit" value="Voltar para a página de criação de currículo" />
 			            </form>
 			            </tr></td></table>
 			            <footer>
 			                <p style="text-align:left">Desenvolvedores: Alexandre Leite, Carlos Henrique Ferreira, Christopher Brandão, Giovanni Paes, Lucas Chagas, Paulo Victor</p><br>
 			                <p style="text-align:left">Disciplina: EEL418-Programação Avançada</p><br>
-			            </footer> 
+			            </footer>
 		            </div>
 				</div>
 			</div>

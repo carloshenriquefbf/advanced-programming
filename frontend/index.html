@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Page App</title>
+    <title>Curriculum Generator</title>
     <link rel="stylesheet" href="/static/css/index.css">
     <script src="runlatex.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
@@ -14,12 +14,14 @@
     <script src="add_experience.js"></script>
     <script src="add_skill.js"></script>
     <script src="addChild.js"></script>
+    <script src="showSnackbar.js"></script>
 </head>
 <body onload="update()">
     <nav class="nav">
         <a href="/" class="nav__link" data-link>Início</a>
-        <a href="/cadastro" class="nav__link" data-link>Cadastro</a>
-        <a href="/agradecimento" class="nav__link" data-link>Agradecimentos</a>
+        <a href="/register" class="nav__link" data-link>Registrar</a>
+        <a href="/cadastro" class="nav__link" data-link>Criar currículo</a>
+        <a href="/aboutUs" class="nav__link" data-link>Sobre Nós</a>
     </nav>
     <div id="app"></div>
     <script type="module" src="/static/js/index.js"></script>

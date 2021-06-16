@@ -17,22 +17,30 @@ export default class extends AbstractView {
 	            		</p>
 	           			<br><br>
 	           			<h1>Como funciona?</h1>
-	           			
+	           			<h2>Para candidatos:<h2>
 	           			<p>
-	                		Os seus dados servem de entrada no template escolhido como um documento LaTeX. Eles são enviados em conjunto para a API do servidor TexLive.net que irá gerar o seu currículo personalizado no formato pdf.
+	                		Você pode escolher entre se criar seu currículo anonimamente ou se registrar como usuário e ter seu currículo visto por recrutadores da sua área! Após o registro (ou se você decidiu não se regisrtar) os seus dados servirão de entrada no template escolhido como um documento LaTeX. Eles são enviados em conjunto para a API do servidor TexLive.net que irá gerar o seu currículo personalizado no formato pdf.
 			            </p>
-			            <br>
+						<h2>Para recrutadores:<h2>
+						<p>
+							Se você é um recrutador, é necessário se registrar como usuário. Durante o cadastro você nos informará a área de recrutamento e, quando um candidato da área se cadastrar, você será avisado.
+			            </p>
+						<br>
 				        <h1>E quanto custa?</h1>
-
+						<h2>Para candidatos:<h2>
 			            <p>
-			                Nada! Todos os nossos templates, no momento, são grátis. No futuro teremos uma versão premium do site que contará com conteúdo exclusivo!
+			                Nada! Todos os nossos templates são grátis. Porém, o envio do seu currículo aos recrutadores terão limites de acordo com o plano escolhido.
 			            </p>
 			            <br>
+						<h2>Para recrutadores:<h2>
+						<p>
+							Nada também! Todos os nossos serviços são grátis. Porém, a quantidade de currículos recebidos será de acordo com o plano escolhido.
+			            </p>
 
 			            <table style="width:100%">
-			            <tr>            
-			            <td> 
-		            
+			            <tr>
+			            <td>
+
 		            <form action="/cadastro">
 		                <input type="submit" value="Crie já seu currículo!" />
 		            </form>

@@ -1,6 +1,7 @@
 import Inicio from "./views/Inicio.js";
 import Cadastro from "./views/Cadastro.js";
-import Agradecimento from "./views/Agradecimento.js";
+import SobreNos from "./views/SobreNos.js";
+import Registro from "./views/Registro.js"
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -21,8 +22,9 @@ const navigateTo = url => {
 const router = async () => {
     const routes = [
         { path: "/", view: Inicio },
-        { path: "/cadastro", view: Cadastro },        
-        { path: "/agradecimento", view: Agradecimento }
+        { path: "/cadastro", view: Cadastro },
+        { path: "/aboutUs", view: SobreNos },
+        { path: "/register", view: Registro }
     ];
 
     // Test each route for potential match

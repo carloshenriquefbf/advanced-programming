@@ -3,7 +3,7 @@ import AbstractView from "./AbstractView.js";
 export default class extends AbstractView {
     constructor(params) {
         super(params);
-        this.setTitle("Cadastro");
+        this.setTitle("Criar currículo");
     }
 
     async getHtml() {
@@ -12,41 +12,41 @@ export default class extends AbstractView {
 				<div class="efeito">
 					<div class="container">
 				        <div class="campo">
-				            <h1 id="titulo">Modelador Auxiliar de Currículos</h1>     
+				            <h1 id="titulo">Modelador Auxiliar de Currículos</h1>
 				        </div>
 
 				        <form onload="update()">
 				        <table style="width:100%">
-				        <tr>            
+				        <tr>
 				            <td><figure>
 				            <img src="images/firstTemplate.png"
 				                width="300" height="400">
-				            </figure>  
-				            <input type="radio" id="firstTemplate" name="template" value="firstTemplate" onclick="whichTemplate()" checked>               
+				            </figure>
+				            <input type="radio" id="firstTemplate" name="template" value="firstTemplate" onclick="whichTemplate()" checked>
 				            <label for="firstTemplate">Template no. 1</label><br></td>
-				        
+
 				            <td><figure>
 				            <img src="images/secondTemplate.png"
 				                width="300" height="400">
-				            </figure>  
-				            <input type="radio" id="secondTemplate" name="template" value="secondTemplate" onclick="whichTemplate()">  
+				            </figure>
+				            <input type="radio" id="secondTemplate" name="template" value="secondTemplate" onclick="whichTemplate()">
 				            <label for="secondTemplate">Template no. 2</label></td>
-				        
+
 				            <td><figure>
 				            <img src="images/thirdTemplate.png"
 				                width="300" height="400">
-				            </figure>  
-				            <input type="radio" id="thirdTemplate" name="template" value="thirdTemplate" onclick="whichTemplate()">  
+				            </figure>
+				            <input type="radio" id="thirdTemplate" name="template" value="thirdTemplate" onclick="whichTemplate()">
 				            <label for="thirdTemplate">Template no. 3</label>   </td>
 				        </tr>
-				        </table>  
-				        </form>                       
+				        </table>
+				        </form>
 				        <input type="text" id="templateField" style="display:none" value="firstTemplate">
 				        <br>
-				        <form> 
+				        <form>
 				            <div class="campo">
 				                <u><h1 id="titulo">Dados pessoais</h1></u>
-				            </div>  
+				            </div>
 
 				            <fieldset class="grupo">
 
@@ -54,7 +54,7 @@ export default class extends AbstractView {
 				                    <label for= "nomePessoa"><strong>Nome Completo</strong></label>
 				                    <input type="text" name="nomePessoa" id="nomePessoa" required onkeyup="update()">
 				                </div>
-				            
+
 				                <div class="campo">
 				                    <label for="email"><strong>Email</strong></label>
 				                    <input type="email" name="email" id="email" required onkeyup="update()">
@@ -65,7 +65,7 @@ export default class extends AbstractView {
 				                    <input type="phone" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required onkeyup="update()">
 				                </div>
 
-				            </fieldset>    
+				            </fieldset>
 
 				            <div class="campo">
 				                <u><h1 id="titulo">Formação Profissional</h1></u>
@@ -81,11 +81,11 @@ export default class extends AbstractView {
 				                    <label for="curso"><strong>Curso</strong></label>
 				                    <input type="text" name="curso" id="curso" onkeyup="update()">
 				                </div>
-				            
+
 				                <div class="campo">
 				                    <label for="dataformatura"><strong>Previsão de Formatura</strong></label>
 				                    <input id="dataformatura" type="date" onkeyup="update()" onchange="update()">
-				                </div>            
+				                </div>
 				            </fieldset>
 
 				            <form>
@@ -102,20 +102,20 @@ export default class extends AbstractView {
 
 						        <button class="llbutton" onclick="addChild('Experience');" id="lo-pre1">Adicionar experiência</button>
 					        </form>
-				            <br>            
-				        </form> 
+				            <br>
+				        </form>
 
 				        <form style="display" id="form2-pre0" name="form2-pre0" enctype="multipart/form-data" action="https://texlive.net/cgi-bin/latexcgi" method="post" target="pre0ifr">
 				        <textarea type="text" style="display:none" name="filecontents[]" vairable="yname"></textarea>
 				            <input type="text" name="filename[]" value="document.tex" style="display:none">
 				            <input type="text" name="engine" value="pdflatex" style="display:none">
 				            <input type="text" name="return" value="pdfjs" style="display:none">
-				            <br>            
+				            <br>
 				        <button class="llbutton" onclick="redirect();" id="lo-pre0">Gerar currículo</button>
 				        </form>
 					</div>
 				</div>
-			</div>  
+			</div>
                 `;
     }
 }

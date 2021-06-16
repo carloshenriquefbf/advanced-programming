@@ -13,33 +13,43 @@
 	font-family: sans-serif;
 	color: #380861;
 	margin-left: 0%;
-	font-size: 15px; 
+	font-size: 15px;
 }
 
 fieldset{
 	border: 0;
 }
 
+/* Add a black background color to the top navigation */
 .nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: var(--nav-width);
-    height: 100vh;
     background: #222222;
+	overflow: hidden;
+	width: 3000px;
 }
 
-.nav__link {
-    display: block;
-    padding: 12px 18px;
-    text-decoration: none;
-    color: #eeeeee;
-    font-weight: 500;
-}
+  /* Style the links inside the navigation bar */
+  .nav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
 
-.nav__link:hover {
-    background: rgba(255, 255, 255, 0.05);
-}
+  /* Change the color of links on hover */
+  .nav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+
+  .nav a.active {
+	background-color: #04AA6D;
+	color: white;
+  }
 
 #app {
     margin: 2em;
@@ -52,26 +62,26 @@ a {
 }
 .campo{
 	margin-bottom: 1em;
-	
+
 }
 
 .campo label{
 
 	margin-bottom: 0.2em;
 	padding: center;
-	color: ##FF7F50;;
+	color: #FF7F50;;
 	display: block;
-	
+
 }
 
 fieldset.grupo .campo{
 	margin: 2em;
 	text-align: center;
 	float: left;
-	
+
 }
 
-.campo input[type="text"], .campo input[type="email"], .campo input[type="phone"], .campo input[type="submit"], .campo select, .campo textarea {
+.campo input[type="text"], .campo input[type="email"], .campo input[type="phone"], .campo input[type="submit"], .campo input[type="password"], .campo select, .campo textarea {
 	font-size-adjust: 15px;
 	padding: 0.75em;
 	border: 5px solid #FF7F50;
@@ -92,29 +102,24 @@ fieldset.grupo .campo{
 }
 
 #principal{
-	background-image: url('cidade.jpg');
+	background-image: url("cidade.jpg");
 	background-size: 100%;
 	min-height: 700px;
 	padding: 50px;
-
-	
 }
 
 .efeito{
-	background-color: rgba(0, 15, 0, 0.75);
+	background-color: rgba(151, 151, 151, 0.75);
 	padding: 90px 0 90px 0;
 }
 
 body{
-	
 	background-image: url("cidade.jpg");
    	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    background-color: black;
-    --nav-width: 200px;
-    margin: 0 0 0 var(--nav-width);
+
+    background-color: rgb(0, 0, 151);
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     color: #FF7F50;;
@@ -135,17 +140,70 @@ h1{
 
 }
 
+h2{
+	color: #FF7F50;
+	text-shadow: 1px 1px 1px #111111;
+	text-align: center;
+	margin: 0 0 50px 0;
+
+}
+
 td, h3, p{
     text-align: center;
 }
 
-footer { 
+footer {
     width: 100%;
     bottom: 0;
     position: fixed;
 }
 
-form.{
+form {
 	padding: 30px;
-	
+
 }
+
+#snackbar {
+	visibility: hidden; /* Hidden by default. Visible on click */
+	min-width: 250px; /* Set a default minimum width */
+	margin-left: -125px; /* Divide value of min-width by 2 */
+	background-color: rgb(0, 125, 0); /* Green background color */
+	color: #fff; /* White text color */
+	text-align: center; /* Centered text */
+	border-radius: 2px; /* Rounded borders */
+	padding: 16px; /* Padding */
+	position: fixed; /* Sit on top of the screen */
+	z-index: 1; /* Add a z-index if needed */
+	left: 50%; /* Center the snackbar */
+	bottom: 30px; /* 30px from the bottom */
+  }
+
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+	visibility: visible; /* Show the snackbar */
+	/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+	However, delay the fade out process for 2.5 seconds */
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+
+  @keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+
+  @-webkit-keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
+
+  @keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
