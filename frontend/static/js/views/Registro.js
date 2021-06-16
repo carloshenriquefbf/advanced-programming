@@ -34,15 +34,36 @@ export default class extends AbstractView {
                         </div>
                         </fieldset>
 
+                        <fieldset class="grupo">
+
+                        <table style="width:100%">
+				        <tr>
+                        <td>
                         <input type="radio" id="candidato" name="role" value="candidato">
                         <label for="candidato">Sou um candidato</label><br>
                         <input type="radio" id="recrutador" name="role" value="recrutador">
                         <label for="recrutador">Sou um recrutador</label><br>
+                        </td>
 
+
+                        <td>
+                        <input type="radio" id="ti" name="area" value="ti">
+                        <label for="ti">Sou da área de TI</label><br>
+                        <input type="radio" id="medica" name="area" value="medica">
+                        <label for="medica">Sou da área médica</label><br>
+                        <input type="radio" id="financeira" name="area" value="financeira">
+                        <label for="financeira">Sou da área financeira</label><br>
+                        <input type="radio" id="educacao" name="area" value="educacao">
+                        <label for="educacao">Sou da área de educação</label><br>
+                        </td>
+                        <td>
+                        <button type="submit" class="registerbtn" onclick="showSnackbar()">Registrar</button>
+                        </td>
+                        </fieldset>
                         <hr>
                     </div>
                     <br>
-                    <button type="submit" class="registerbtn" onclick="showSnackbar()">Registrar</button>
+
                 </form>
                 </div>
                 <div id="snackbar">Usuário cadastrado com sucesso!</div>
