@@ -15,7 +15,7 @@ router.post('/register', async (req, res) => {
 
         user.password = undefined;
 
-        return res.send({ user });
+        return res.redirect('/cadastro');
     } catch (err) {
         return res.status(400).send({ error: 'Registration failed' });
     }
