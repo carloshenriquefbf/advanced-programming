@@ -15,7 +15,7 @@ function update() {
         
                 
         \\begin{center}
-        {\\Large \\bfseries ${nomePessoa.value}} \\\\ 
+        {\\Large \\textbf{${nomePessoa.value}}} \\\\ 
         
         \\end{center}
     

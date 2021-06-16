@@ -19,7 +19,7 @@ export default class extends AbstractView {
 	           			<h1>Como funciona?</h1>
 	           			<h2>Para candidatos:<h2>
 	           			<p>
-	                		Você pode escolher entre se criar seu currículo anonimamente ou se registrar como usuário e ter seu currículo visto por recrutadores da sua área! Após o registro (ou se você decidiu não se regisrtar) os seus dados servirão de entrada no template escolhido como um documento LaTeX. Eles são enviados em conjunto para a API do servidor TexLive.net que irá gerar o seu currículo personalizado no formato pdf.
+	                		Você pode escolher entre criar seu currículo anonimamente ou se registrar como usuário e ter seu currículo visto por recrutadores da sua área! Após o registro (ou se você decidiu não se registrar) os seus dados servirão de entrada no template escolhido como um documento LaTeX. Eles são enviados em conjunto para a API do servidor TexLive.net que irá gerar o seu currículo personalizado no formato pdf.
 			            </p>
 						<h2>Para recrutadores:<h2>
 						<p>
@@ -29,7 +29,7 @@ export default class extends AbstractView {
 				        <h1>E quanto custa?</h1>
 						<h2>Para candidatos:<h2>
 			            <p>
-			                Nada! Todos os nossos templates são grátis. Porém, o envio do seu currículo aos recrutadores terão limites de acordo com o plano escolhido.
+			                Nada! Todos os nossos templates são grátis. Porém, o envio do seu currículo aos recrutadores terá limites de acordo com o plano escolhido.
 			            </p>
 			            <br>
 						<h2>Para recrutadores:<h2>
@@ -45,7 +45,7 @@ export default class extends AbstractView {
 		                <input type="submit" value="Registrar" />
 		            </form>
 					<form action="/cadastro">
-					<input type="submit" value="Criar curríuclo" />
+					<input type="submit" value="Criar currículo" />
 					</form>
 		            </tr></td></table>
 
