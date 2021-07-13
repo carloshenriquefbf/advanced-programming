@@ -3,7 +3,7 @@ const path = require("path");
 const bodyPaser = require('body-parser');
 const mongoose = require ('mongoose');
 
-mongoose.connect('mongodb+srv://Grupo_7:grupopa123@cluster0.zx6l3.mongodb.net/cvdb?retryWrites=true&w=majority');
+mongoose.connect(SECRET_KEY);
 mongoose.Promise = global.Promise;
 
 module.exports = mongoose;
