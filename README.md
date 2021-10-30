@@ -1,12 +1,16 @@
-# About The Project
+# Advanced Programming
+
+This is a repository for UFRJ's Advanced Programming (EEL418) class.
+
+## About The Project
 
 Using the TeXLive.net server to provide free résumés tailored to each user.
 
-## Getting Started
+### Getting Started
 
 To get a local copy up and running follow these simple example steps:
 
-### Execution 
+#### Execution 
 
 1. Clone the repo
    ```sh
@@ -27,7 +31,7 @@ The server is now running. Access it at http://localhost:3000/
 **the first port can also be chosen, the second one needs to be 3000 ( "-p < port >:3000"). Then the server will run at http://localhost:< port >/
 
 
-### Stoping and removing the container
+#### Stoping and removing the container
 
 * To see if the container is running type in the terminal:
     ```sh
@@ -44,11 +48,11 @@ The server is now running. Access it at http://localhost:3000/
    (sudo) docker rm < container id > 
    ```
 
-## License
+### License
 
 Distributed under the MIT License.
 
-## How It Works
+### How It Works
 
 There are two scripts located at /scripts, ```runlatex.js``` and ```update.js```. 
 
@@ -60,6 +64,6 @@ This script uses TeXLive.net server, which accepts a HTTP Post request specifyin
 
 This script fills the blanks on the résumé form according to the user input and fills the text area that shall be sent as a HTTP Post request to the TeXLive.net server through ```runlatex.js```. 
 
-## Acknowledgements
+### Acknowledgements
 
 * [runlatex.js](https://github.com/learnlatex/learnlatex.github.io)
